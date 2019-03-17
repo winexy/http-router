@@ -1,4 +1,4 @@
-const ParamParser = require('./param-parser');
+const ParamParser = require('./ParamParser');
 
 module.exports = function findHandler(map, method, pathname) {
   let params = {};
