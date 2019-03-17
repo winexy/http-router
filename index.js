@@ -39,7 +39,8 @@ const Router = function () {
         return ErrorHandlers[501](req, res);
       }
 
-      const handler = findHandler(map, method, pathname);
+      const { handler, params } = findHandler(map, method, pathname);
+      req.params = params;
 
       if (!handler) {
         return ErrorHandlers[404](req, res);
